@@ -10,10 +10,10 @@ st.title("Iris Flower CLassification Application")
 filename = "iris_model.pkl"  # pickle file name
 model_path = joblib.load(path.join("model", filename))
 
-sepal_length = st.number_input("Insert sepal length")
-sepal_width = st.number_input("Insert sepal width")
-petal_length = st.number_input("Insert petal length")
-petal_width = st.number_input("Insert petal width")
+sl = st.number_input("Insert sepal length")
+sw = st.number_input("Insert sepal width")
+pl = st.number_input("Insert petal length")
+pw = st.number_input("Insert petal width")
 
 if st.button("Predict"):
     pred = model_path.predict(np.array([[sl, sw, pl, pw]]))
